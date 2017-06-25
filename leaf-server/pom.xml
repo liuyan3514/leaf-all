@@ -12,5 +12,16 @@
 
     <artifactId>leaf-server</artifactId>
 
+    <packaging>war</packaging>
+
+    <dependencies>
+
+        <!-- leaf modules -->
+        <dependency>
+            <groupId>com.github.stone</groupId>
+            <artifactId>leaf-api</artifactId>
+        </dependency>
+
+    </dependencies>
 
 </project>
