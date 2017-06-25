@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.ykse.commons.leaf.dao.LeafCurrentMapper">
+
+    <resultMap id="BASE_RESULT_MAP" type="com.github.stone.leaf.server.entity.LeafCurrent">
+        <id column="leaf_name" property="name" jdbcType="VARCHAR" />
+        <result column="leaf_value" property="value" jdbcType="BIGINT" />
+        <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
+        <result column="gmt_modify" property="gmtModify" jdbcType="TIMESTAMP" />
+    </resultMap>
+
+    <sql id="BASE_COLUMNS">
+        leaf_name,leaf_value,gmt_create,gmt_modify
+    </sql>
+
+    <insert id="insert" parameterType="com.github.stone.leaf.server.entity.LeafCurrent">
+        INSERT INTO leaf_current
+        (leaf_name,leaf_value,gmt_create,gmt_modify)
+        VALUES(#{name},#{value},#{gmtCreate},#{gmtModify})
+    </insert>
+
+    <select id="getCurrent" resultMap="BASE_RESULT_MAP" parameterType="java.lang.String">
+        SELECT
+        <include refid="BASE_COLUMNS" />
+        FROM leaf_current WHERE leaf_name = #{name,jdbcType=VARCHAR}
+    </select>
+
+    <update id="increment">
+        UPDATE leaf_current
+        SET modify_date = now(), value = value + #{delta, jdbcType=INTEGER}
+        WHERE leaf_name = #{name, jdbcType=VARCHAR} AND value = #{orginal, jdbcType=BIGINT}
+    </update>
+
+</mapper>
