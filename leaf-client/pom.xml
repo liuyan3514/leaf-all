@@ -11,5 +11,18 @@
 
     <artifactId>leaf-client</artifactId>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>com.github.stone</groupId>
+            <artifactId>leaf-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+
+    </dependencies>
 
 </project>
