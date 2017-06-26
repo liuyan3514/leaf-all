@@ -27,8 +27,8 @@
 
     <update id="increment">
         UPDATE leaf_current
-        SET modify_date = now(), value = value + #{delta, jdbcType=INTEGER}
-        WHERE leaf_name = #{name, jdbcType=VARCHAR} AND value = #{orginal, jdbcType=BIGINT}
+        SET gmt_modify = now(), leaf_value = #{newValue, jdbcType=BIGINT}
+        WHERE leaf_name = #{name, jdbcType=VARCHAR} AND leaf_value = #{oldValue, jdbcType=BIGINT}
     </update>
 
 </mapper>

@@ -14,17 +14,17 @@
         leaf_name,leaf_type,delta,maximum,gmt_create
     </sql>
 
-    <select id="getAllLeafSettings" resultMap="BASE_RESULT_MAP">
-        SELECT
-        <include refid="BASE_COLUMNS" />
-        FROM leaf_settings
-    </select>
-
     <select id="getSettings" resultMap="BASE_RESULT_MAP" parameterType="java.lang.String">
         SELECT
         <include refid="BASE_COLUMNS" />
         FROM leaf_settings
         WHERE leaf_name = #{name,jdbcType=VARCHAR}
+    </select>
+
+    <select id="getAll" resultMap="BASE_RESULT_MAP">
+        SELECT
+        <include refid="BASE_COLUMNS" />
+        FROM leaf_settings ORDER BY gmt_create DESC
     </select>
 
     <insert id="insert" parameterType="com.github.stone.leaf.server.entity.LeafSettings">

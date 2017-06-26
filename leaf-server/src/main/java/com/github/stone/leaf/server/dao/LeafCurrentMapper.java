@@ -1,6 +1,7 @@
 package com.github.stone.leaf.server.dao;
 
 import com.github.stone.leaf.server.entity.LeafCurrent;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * leaf current mapper
@@ -29,10 +30,12 @@ public interface LeafCurrentMapper {
      * increment leaf current value
      *
      * @param leafName leaf name
-     * @param delta    value delta
-     * @param oldValue change when value is oldValue
+     * @param newValue new leaf value
+     * @param oldValue update when leaf value is oldValue
      * @return rows
      */
-    int increment(String leafName, Integer delta, Long oldValue);
+    int increment(@Param("name") String leafName,
+                  @Param("newValue") Long newValue,
+                  @Param("oldValue") Long oldValue);
 
 }

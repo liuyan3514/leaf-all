@@ -42,7 +42,7 @@ public class LeafCurrentMapperTest extends AbstractMapperTest {
         LeafCurrent current = createLeafCurrent();
         assertEquals(1, leafCurrentMapper.insert(current));
 
-        assertEquals(1, leafCurrentMapper.increment(leafName, delta, current.getValue()));
+        assertEquals(1, leafCurrentMapper.increment(leafName, current.getValue() + delta, current.getValue()));
         LeafCurrent afterIncrement = leafCurrentMapper.getCurrent(leafName);
         assertEquals(current.getValue() + delta, afterIncrement.getValue().longValue());
     }
