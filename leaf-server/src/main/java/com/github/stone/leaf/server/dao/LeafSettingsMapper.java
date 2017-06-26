@@ -20,17 +20,10 @@ public interface LeafSettingsMapper {
     int insert(LeafSettings settings);
 
     /**
-     * get all leaf settings
-     *
-     * @return all leaf settings
-     */
-    List<LeafSettings> getSettingsAll();
-
-    /**
-     * get one leaf settings
+     * get leaf settings
      *
      * @param leafName
      * @return leaf settings
      */
-    LeafSettings getSettings(String leafName);
+    List<LeafSettings> getSettings(String leafName);
 }

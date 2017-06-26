@@ -20,15 +20,14 @@
         FROM leaf_settings
     </select>
 
-    <select id="getSettings" resultMap="BASE_RESULT_MAP"
-            parameterType="java.lang.String">
+    <select id="getSettings" resultMap="BASE_RESULT_MAP" parameterType="java.lang.String">
         SELECT
         <include refid="BASE_COLUMNS" />
         FROM leaf_settings
         WHERE leaf_name = #{name,jdbcType=VARCHAR}
     </select>
 
-    <insert id="insert" parameterType="cn.com.ykse.commons.leaf.entity.LeafSettings">
+    <insert id="insert" parameterType="com.github.stone.leaf.server.entity.LeafSettings">
         INSERT INTO
         leaf_settings
         (leaf_name,leaf_type,delta,maximum,gmt_create)
