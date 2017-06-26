@@ -8,6 +8,6 @@ package com.github.stone.leaf.server.enums;
 public enum LeafGenType {
 
     REDIS,
-    
+
     MYSQL;
 }

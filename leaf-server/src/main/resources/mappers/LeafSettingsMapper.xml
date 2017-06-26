@@ -3,11 +3,11 @@
 <mapper namespace="com.github.stone.leaf.server.dao.LeafSettingsMapper">
 
     <resultMap id="BASE_RESULT_MAP" type="com.github.stone.leaf.server.entity.LeafSettings">
-        <id column="leaf_name" property="name" jdbcType="VARCHAR" />
-        <result column="leaf_type" property="type" jdbcType="VARCHAR" />
-        <result column="delta" property="delta" jdbcType="INTEGER" />
-        <result column="maximum" property="maximum" jdbcType="BIGINT" />
-        <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
+        <id column="leaf_name" property="name" jdbcType="VARCHAR"/>
+        <result column="leaf_type" property="type" jdbcType="VARCHAR"/>
+        <result column="delta" property="delta" jdbcType="INTEGER"/>
+        <result column="maximum" property="maximum" jdbcType="BIGINT"/>
+        <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <sql id="BASE_COLUMNS">
@@ -16,14 +16,14 @@
 
     <select id="getSettings" resultMap="BASE_RESULT_MAP" parameterType="java.lang.String">
         SELECT
-        <include refid="BASE_COLUMNS" />
+        <include refid="BASE_COLUMNS"/>
         FROM leaf_settings
         WHERE leaf_name = #{name,jdbcType=VARCHAR}
     </select>
 
     <select id="getAll" resultMap="BASE_RESULT_MAP">
         SELECT
-        <include refid="BASE_COLUMNS" />
+        <include refid="BASE_COLUMNS"/>
         FROM leaf_settings ORDER BY gmt_create DESC
     </select>
 

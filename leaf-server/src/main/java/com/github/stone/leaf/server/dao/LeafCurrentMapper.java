@@ -34,8 +34,6 @@ public interface LeafCurrentMapper {
      * @param oldValue update when leaf value is oldValue
      * @return rows
      */
-    int increment(@Param("name") String leafName,
-                  @Param("newValue") Long newValue,
-                  @Param("oldValue") Long oldValue);
+    int increment(@Param("name") String leafName, @Param("newValue") Long newValue, @Param("oldValue") Long oldValue);
 
 }

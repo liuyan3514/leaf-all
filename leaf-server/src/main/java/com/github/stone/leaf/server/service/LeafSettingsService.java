@@ -5,7 +5,7 @@ import java.util.List;
 import com.github.stone.leaf.server.entity.LeafSettings;
 
 /**
- *
+ * leaf setting service
  *
  * @author stone
  */
@@ -14,9 +14,9 @@ public interface LeafSettingsService {
     /**
      * get all leaf settings
      *
-     * @return
+     * @return get all leaf settings
      */
-    List<LeafSettings> getLeafSettings();
+    List<LeafSettings> getAll();
 
     /**
      * get leaf settings by leaf name
@@ -24,7 +24,7 @@ public interface LeafSettingsService {
      * @param leafName
      * @return minimum value and segment size
      */
-    LeafSettings getLeafSettings(String leafName);
+    LeafSettings getSettings(String leafName);
 
     /**
      * get leaf settings with cache by leaf name
@@ -32,13 +32,13 @@ public interface LeafSettingsService {
      * @param leafName
      * @return minimum value and segment size
      */
-    LeafSettings getLeafSettingsWithCache(String leafName);
+    LeafSettings getLocalSettings(String leafName);
 
     /**
      * add leaf settings
      *
-     * @param leafSettings
+     * @param settings
      */
-    void addLeafSettings(LeafSettings leafSettings);
+    void addLeafSettings(LeafSettings settings);
 
 }

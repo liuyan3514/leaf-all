@@ -8,12 +8,12 @@
        	   http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
        ">
 
-    <context:annotation-config />
+    <context:annotation-config/>
 
-    <context:component-scan base-package="com.github.stone.leaf.server" >
-        <context:exclude-filter type="aspectj" expression="com.github.stone.leaf.server.rest.*" />
+    <context:component-scan base-package="com.github.stone.leaf.server">
+        <context:exclude-filter type="aspectj" expression="com.github.stone.leaf.server.rest.*"/>
     </context:component-scan>
 
-    <context:property-placeholder location="classpath*:leaf.properties" />
+    <context:property-placeholder location="classpath*:leaf.properties"/>
 
 </beans>

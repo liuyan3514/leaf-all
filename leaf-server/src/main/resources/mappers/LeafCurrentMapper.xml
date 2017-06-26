@@ -3,10 +3,10 @@
 <mapper namespace="com.github.stone.leaf.server.dao.LeafCurrentMapper">
 
     <resultMap id="BASE_RESULT_MAP" type="com.github.stone.leaf.server.entity.LeafCurrent">
-        <id column="leaf_name" property="name" jdbcType="VARCHAR" />
-        <result column="leaf_value" property="value" jdbcType="BIGINT" />
-        <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
-        <result column="gmt_modify" property="gmtModify" jdbcType="TIMESTAMP" />
+        <id column="leaf_name" property="name" jdbcType="VARCHAR"/>
+        <result column="leaf_value" property="value" jdbcType="BIGINT"/>
+        <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP"/>
+        <result column="gmt_modify" property="gmtModify" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <sql id="BASE_COLUMNS">
@@ -21,7 +21,7 @@
 
     <select id="getCurrent" resultMap="BASE_RESULT_MAP" parameterType="java.lang.String">
         SELECT
-        <include refid="BASE_COLUMNS" />
+        <include refid="BASE_COLUMNS"/>
         FROM leaf_current WHERE leaf_name = #{name,jdbcType=VARCHAR}
     </select>
 

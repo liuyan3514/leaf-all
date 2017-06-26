@@ -6,8 +6,8 @@
            http://code.alibabatech.com/schema/dubbo    http://code.alibabatech.com/schema/dubbo/dubbo.xsd
        ">
 
-    <dubbo:application name="${dubbo.application.name}" />
-    <dubbo:protocol name="dubbo" port="${dubbo.protocol.port}" />
-    <dubbo:registry address="${dubbo.registry.address}" />
+    <dubbo:application name="${dubbo.application.name}"/>
+    <dubbo:protocol name="dubbo" port="${dubbo.protocol.port}"/>
+    <dubbo:registry address="${dubbo.registry.address}"/>
 
 </beans>
