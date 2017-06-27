@@ -43,7 +43,7 @@ public class SqlLeafCurrentServiceImpl implements LeafCurrentService {
         Date gmtModify = new Date();
         LeafCurrent current = new LeafCurrent();
         current.setName(settings.getName());
-        current.setValue(settings.getMaximum());
+        current.setValue(settings.getMinimum());
         current.setGmtCreate(gmtModify);
         current.setGmtModify(gmtModify);
         currentMapper.insert(current);

@@ -25,7 +25,7 @@ public class LeafSettings implements Serializable {
     /**
      * leaf minimum value
      */
-    private Long maximum;
+    private Long minimum;
 
     /**
      * leaf segment size
@@ -53,13 +53,11 @@ public class LeafSettings implements Serializable {
         this.type = type;
     }
 
-    public Long getMaximum() {
-        return maximum;
+    public Long getMinimum() {
+        return minimum;
     }
 
-    public void setMaximum(Long maximum) {
-        this.maximum = maximum;
-    }
+    public void setMinimum(Long minimum) { this.minimum = minimum; }
 
     public Integer getDelta() {
         return delta;

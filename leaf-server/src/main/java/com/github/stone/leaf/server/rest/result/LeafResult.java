@@ -1,4 +1,4 @@
-package com.github.stone.leaf.server.rest;
+package com.github.stone.leaf.server.rest.result;
 
 import com.github.stone.leaf.server.enums.LeafMessage;
 

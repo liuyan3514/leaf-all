@@ -15,7 +15,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @author stone
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath*:spring/spring-common.xml", "classpath*:spring/spring-mybatis.xml"})
+@ContextConfiguration(locations = {"classpath*:spring/spring-common.xml",
+                                   "classpath*:spring/spring-mybatis.xml",
+                                   "classpath*:spring/spring-redis.xml"})
 public abstract class AbstractMapperTest {
 
     Long leafValue = 10000L;
@@ -36,7 +38,7 @@ public abstract class AbstractMapperTest {
         settings.setName(leafName);
         settings.setType(LeafGenType.MYSQL.name());
         settings.setDelta(100);
-        settings.setMaximum(100000L);
+        settings.setMinimum(100000L);
         settings.setGmtCreate(new Date());
         return settings;
     }

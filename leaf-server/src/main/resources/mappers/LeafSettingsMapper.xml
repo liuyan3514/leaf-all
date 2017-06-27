@@ -6,12 +6,12 @@
         <id column="leaf_name" property="name" jdbcType="VARCHAR"/>
         <result column="leaf_type" property="type" jdbcType="VARCHAR"/>
         <result column="delta" property="delta" jdbcType="INTEGER"/>
-        <result column="maximum" property="maximum" jdbcType="BIGINT"/>
+        <result column="minimum" property="minimum" jdbcType="BIGINT"/>
         <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <sql id="BASE_COLUMNS">
-        leaf_name,leaf_type,delta,maximum,gmt_create
+        leaf_name,leaf_type,delta,minimum,gmt_create
     </sql>
 
     <select id="getSettings" resultMap="BASE_RESULT_MAP" parameterType="java.lang.String">
@@ -30,9 +30,9 @@
     <insert id="insert" parameterType="com.github.stone.leaf.server.entity.LeafSettings">
         INSERT INTO
         leaf_settings
-        (leaf_name,leaf_type,delta,maximum,gmt_create)
+        (leaf_name,leaf_type,delta,minimum,gmt_create)
         VALUES
-        (#{name},#{type},#{delta},#{maximum},#{gmtCreate})
+        (#{name},#{type},#{delta},#{minimum},#{gmtCreate})
     </insert>
 
 </mapper>

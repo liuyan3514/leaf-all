@@ -7,7 +7,9 @@ package com.github.stone.leaf.server.enums;
  */
 public enum LeafMessage {
 
-    ;
+    SUCCESS(""),
+
+    NOT_EXIST_LEAF(""),;
 
     private final String message;
 
