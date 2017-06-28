@@ -30,12 +30,12 @@ public class LeafSettingsController {
     @RequestMapping(value = "/settings", method = RequestMethod.PUT)
     public LeafResult add(@RequestBody LeafSettings leafSettings) {
         leafSettingsService.addLeafSettings(leafSettings);
-        return new LeafResult(LeafMessage.SUCCESS);
+        return new LeafResult(leafSettings.getName(), LeafMessage.SUCCESS);
     }
 
     @ResponseBody
     @RequestMapping(value = "/settings/{leafName}", method = RequestMethod.GET)
-    public Object get(@PathVariable("leafName") String leafName) {
+    public LeafResult get(@PathVariable("leafName") String leafName) {
         if (Constants.REST_ALL_MATCH.equals(leafName)) {
             List<LeafSettings> data = leafSettingsService.getAll();
             return new LeafResult(data, LeafMessage.SUCCESS);

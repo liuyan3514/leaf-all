@@ -1,7 +1,9 @@
 package com.github.stone.leaf.server.service.impl;
 
 import java.util.Date;
-import java.util.concurrent.TimeoutException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.github.stone.leaf.protocol.LeafSegment;
 import com.github.stone.leaf.server.dao.LeafCurrentMapper;
@@ -9,8 +11,6 @@ import com.github.stone.leaf.server.entity.LeafCurrent;
 import com.github.stone.leaf.server.entity.LeafSettings;
 import com.github.stone.leaf.server.enums.LeafGenType;
 import com.github.stone.leaf.server.service.LeafCurrentService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 /**
  * sql leaf current value service

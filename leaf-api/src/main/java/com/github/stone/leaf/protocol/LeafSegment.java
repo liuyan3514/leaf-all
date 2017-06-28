@@ -9,6 +9,8 @@ import java.io.Serializable;
  */
 public class LeafSegment implements Serializable {
 
+    private static final long serialVersionUID = 8185678090079120163L;
+
     /**
      * segment value size
      */

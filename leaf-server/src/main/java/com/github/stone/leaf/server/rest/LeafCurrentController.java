@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class LeafCurrentController {
 
     @Autowired
-    private LeafSettingsService settingsService;
+    private LeafSettingsService       settingsService;
 
     @Autowired
     private LeafCurrentServiceFactory currentServiceFactory;
@@ -31,7 +31,7 @@ public class LeafCurrentController {
     public Object getCurrent(@PathVariable("leafName") String leafName) {
         LeafSettings leafSettings = settingsService.getSettings(leafName);
         if (leafSettings == null) {
-            return new LeafResult(LeafMessage.NOT_EXIST_LEAF);
+            return new LeafResult(LeafMessage.NOT_FOUND_LEAF);
         }
         Long current = currentServiceFactory.getCurrentService(leafSettings)
             .getLeafCurrent(leafSettings);

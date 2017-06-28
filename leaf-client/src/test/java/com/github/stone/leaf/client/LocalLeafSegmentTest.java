@@ -1,12 +1,12 @@
 package com.github.stone.leaf.client;
 
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicLong;
 
 import com.github.stone.leaf.api.LeafCurrentFacade;
 import com.github.stone.leaf.protocol.LeafSegment;
+
 import junit.framework.TestCase;
 
 /**

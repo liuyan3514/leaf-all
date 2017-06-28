@@ -2,12 +2,13 @@ package com.github.stone.leaf.server.dao;
 
 import java.util.Date;
 
-import com.github.stone.leaf.server.entity.LeafCurrent;
-import com.github.stone.leaf.server.entity.LeafSettings;
-import com.github.stone.leaf.server.enums.LeafGenType;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.github.stone.leaf.server.entity.LeafCurrent;
+import com.github.stone.leaf.server.entity.LeafSettings;
+import com.github.stone.leaf.server.enums.LeafGenType;
 
 /**
  * base mapper test

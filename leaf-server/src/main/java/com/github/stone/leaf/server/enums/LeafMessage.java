@@ -7,9 +7,9 @@ package com.github.stone.leaf.server.enums;
  */
 public enum LeafMessage {
 
-    SUCCESS(""),
+    SUCCESS("操作成功"),
 
-    NOT_EXIST_LEAF(""),;
+    NOT_FOUND_LEAF("节点不存在"),;
 
     private final String message;
 

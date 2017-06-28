@@ -1,13 +1,16 @@
 package com.github.stone.leaf.server.dao;
 
+import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertFalse;
+import static junit.framework.TestCase.assertNotNull;
+
 import java.util.List;
 
-import com.github.stone.leaf.server.entity.LeafSettings;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-import static junit.framework.TestCase.*;
+import com.github.stone.leaf.server.entity.LeafSettings;
 
 /**
  * leaf settings mapper test

@@ -1,14 +1,13 @@
 package com.github.stone.leaf.server.dao;
 
-import java.util.Date;
+import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertNotNull;
 
-import com.github.stone.leaf.server.entity.LeafCurrent;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-import static junit.framework.TestCase.*;
-import static junit.framework.TestCase.assertEquals;
+import com.github.stone.leaf.server.entity.LeafCurrent;
 
 /**
  * leaf current mapper test
