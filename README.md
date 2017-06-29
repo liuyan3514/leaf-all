@@ -1,5 +1,4 @@
 # leaf-all
-generate id of domain
 
 leaf-api is [id generate facade]
 
